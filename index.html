@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emisav</title>
+  <title>Bright Pages</title>
+
   <style>
     /* Stile generale */
     body {
@@ -11,26 +12,8 @@
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
-      background-color: #fff0f0; /* leggero rosa/bianco per contrasto */
+      background-color: #f2fbff; /* celeste chiarissimo */
       color: #333;
-    }
-
-    /* Header */
-    header {
-      background-color: #c70000; /* rosso principale */
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
     }
 
     /* Navigazione */
@@ -38,7 +21,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: rgba(199,0,0,0.95);
+      background-color: rgba(0, 160, 210, 0.95);
       padding: 10px 0;
       text-align: center;
       z-index: 1000;
@@ -55,31 +38,97 @@
       text-decoration: underline;
     }
 
-    /* Sezioni */
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
+    /* Header */
+    header {
+      background-color: #00a0d2; /* celeste principale */
+      color: white;
+      padding: 120px 20px 80px;
       text-align: center;
-      margin-bottom: 40px;
-      color: #c70000;
     }
 
-    /* Informazioni */
-    .info p {
+    header img {
+      width: 180px; /* logo grande */
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    /* Layout contenuto */
+    .container {
+      display: flex;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    /* Sezione principale */
+    .main-content {
+      flex: 3;
+    }
+
+    .main-content h2 {
+      color: #0077a8;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .main-content p {
       font-size: 1.1em;
       line-height: 1.6em;
       text-align: center;
-      max-width: 800px;
-      margin: 0 auto 20px auto;
+      margin-bottom: 20px;
+    }
+
+    /* Sidebar servizi */
+    .services {
+      flex: 1;
+      background-color: #e6f7ff;
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .services h3 {
+      color: #0077a8;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .services li::before {
+      content: "✔";
+      color: #00a0d2;
+      position: absolute;
+      left: 0;
     }
 
     /* Contatti */
     .contatti {
       text-align: center;
+      padding: 60px 20px;
+    }
+
+    .contatti h2 {
+      color: #0077a8;
+      margin-bottom: 20px;
     }
 
     .contatti p {
@@ -95,8 +144,15 @@
       color: white;
     }
 
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navigazione -->
@@ -108,34 +164,56 @@
 
   <!-- Header -->
   <header id="home">
-    <h1>Emisav</h1>
-    <p>Siti web veloci e affidabili per attività commerciali</p>
+    <img src="logo.png" alt="Bright Pages Logo">
+    <h1>Bright Pages</h1>
+    <p>Siti web moderni, veloci e pensati per far crescere il tuo business</p>
   </header>
 
-  <!-- Sezione Informazioni -->
-  <section id="info" class="info">
-    <h2>Le nostre soluzioni</h2>
-    <p>
-      Creiamo siti web su misura per la tua attività commerciale, progettati per attirare clienti e aumentare le vendite. 
-      Con Emisav ottieni siti **veloci**, **affidabili** e **facili da gestire**, pronti a mostrare la tua professionalità online.
-    </p>
-    <p>
-      Offriamo design moderno, ottimizzazione per dispositivi mobili e supporto continuo. Il tuo sito sarà sempre pronto a far crescere il tuo business.
-    </p>
-  </section>
+  <!-- Contenuto principale -->
+  <div class="container" id="info">
 
-  <!-- Sezione Contatti -->
+    <!-- Testo -->
+    <div class="main-content">
+      <h2>Le nostre soluzioni</h2>
+      <p>
+        Bright Pages realizza siti web professionali su misura per aziende, negozi e liberi professionisti.
+        Ogni progetto è pensato per valorizzare il tuo brand e convertire i visitatori in clienti.
+      </p>
+      <p>
+        Utilizziamo tecnologie moderne, design responsive e strutture ottimizzate per offrire
+        prestazioni elevate e un’esperienza utente efficace su ogni dispositivo.
+      </p>
+    </div>
+
+    <!-- Sidebar servizi -->
+    <aside class="services">
+      <h3>I nostri servizi</h3>
+      <ul>
+        <li>Sviluppo siti web aziendali</li>
+        <li>Landing page promozionali</li>
+        <li>Design moderno e personalizzato</li>
+        <li>Ottimizzazione mobile e responsive</li>
+        <li>SEO di base per visibilità online</li>
+        <li>Manutenzione e aggiornamenti</li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <!-- Contatti -->
   <section id="contatti" class="contatti">
     <h2>Contattaci</h2>
     <p>Telefono: +39 081 123 4567</p>
-    <p>Email: info@emisav.it</p>
-    <p>Indirizzo: Napoli, Italia</p>
+    <p>Email: info@brightpages.it</p>
+    <p>Sede: Napoli, Italia</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2026 Emisav. Tutti i diritti riservati.
+    &copy; 2026 Bright Pages. Tutti i diritti riservati.
   </footer>
 
 </body>
 </html>
+
+
